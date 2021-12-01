@@ -4,7 +4,6 @@ body {
     align-items: center;
     background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwonderfulengineering.com%2Fwp-content%2Fuploads%2F2013%2F12%2Fmetal-wallpapers-15.jpg&f=1&nofb=1');
     /* background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2FFphJXKt.jpg&f=1&nofb=1'); */
-    /* background-repeat:repeat-y; */
     background-size:contain; 
     font-family: 'Anton', sans-serif;
 }
