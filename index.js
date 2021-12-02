@@ -14,13 +14,10 @@ pictureSources = [
 ]
 
 const changeContent = (evt, contentName) => {
-    // var aboutCats, tablinks;
     console.log(aboutCats)
-    // aboutCats = document.getElementsByClassName('about-cat')
     for(let i = 0; i < aboutCats.length; i++){
         aboutCats[i].style.display = "none"
     }
-    // tablinks = document.getElementsByClassName('tablink')
     for(let i = 0; i < tablinks.length; i++){
         tablinks[i].className = tablinks[i].className.replace(' active', '')
     }
