@@ -20,54 +20,82 @@
         </section>
 
         <h2 class='section-head'>About Me</h2><br>
+        <div class='tab'>
+            <button class='tablink' onclick="changeContent(event, 'personal')">Personal</button>
+            <button class='tablink' onclick="changeContent(event, 'education')">Education & Experience</button>
+            <button class='tablink' onclick="changeContent(event, 'skills')">Skills</button>
+        </div>
         <section class='about-me-section'>
+            <div class='about-cat' id='personal'>
+                <div>
+                    <h3>Personal</h3>
+                    <p>
+                        I am 20 years old.  I live in Payson, Utah and enjoy welding, working on 
+                        cars, and playing video-games.
+                    </p>
+                    <p>
+                        I first started programming with Python 
+                        on a Raspberry Pi in my early teens.
+                    </p>
+                </div>
+                <div>
+                    <img src='engine-swap.JPG'class='about-pic' alt='car-pic'>
+                    <!-- <p></p> -->
+                    <img src='smoker.jpg' class='about-pic' alt='welding-pic'>
+                    <img src='sidekick1.jpg' class="about-pic">
 
-            <div class='about-cat'>
-                <h3>Personal</h3>
-                <p>
-                    I am 20 years old.  I live in Payson, Utah and enjoy welding, working on 
-                    cars, and playing video-games.
-                </p>
-                <p>
-                    I first started programming with Python 
-                    on a Raspberry Pi in my early teens.
-                </p>
-                <img src='engine-swap.JPG'class='about-pic' alt='car-pic'>
-                <p></p>
-                <img src='smoker.jpg' class='about-pic' alt='welding-pic'>
+                </div>
             </div><br>
-            <div class='about-cat'>
-                <h3>Education & Experience</h3>
-                <p>
-                    I graduated from Mountainland Technical College with certifications in 
-                    Custom Design/Fabrication and Thermal Cutting.
-                </p>
-                <img class = 'about-pic'src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.eduopinions.com%2Fwp-content%2Fuploads%2F2018%2F08%2FMountainlandTechnicalCollege-logo.png&f=1&nofb=1'
-                alt='mtec'>
-                <p>
-                    I worked as a warehouse team member for 3 years at Plunder Design during and after high school.
-                </p>
-                <p>
-                    I'm currently attending Devmountain.
-                </p>
-                <img class='about-pic' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd.newsweek.com%2Fen%2Ffull%2F1533980%2Fdevmountain-logo-lockup-blue.png%3Fw%3D560%26f%3D71b1cf646452985803eb1b7e185c6b9f&f=1&nofb=1'
-                alt='devmountain logo'>
+            <div class='about-cat' id='education'>
+                <div>
+                    <h3>Education & Experience</h3>
+                    <p>
+                        I graduated from Mountainland Technical College with certifications in 
+                        Custom Design/Fabrication and Thermal Cutting.
+                    </p>
+                    <p>
+                        I worked as a warehouse team member for 3 years at Plunder Design during and after high school.
+                    </p>
+                    <p>
+                        I'm currently attending Devmountain.
+                    </p>
+                </div>
+                <div>
+                    <img class = 'about-pic'src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.eduopinions.com%2Fwp-content%2Fuploads%2F2018%2F08%2FMountainlandTechnicalCollege-logo.png&f=1&nofb=1'
+                    alt='mtec'>
+                    <img class='about-pic' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd.newsweek.com%2Fen%2Ffull%2F1533980%2Fdevmountain-logo-lockup-blue.png%3Fw%3D560%26f%3D71b1cf646452985803eb1b7e185c6b9f&f=1&nofb=1'
+                    alt='devmountain logo'>
+                </div>
             </div>
-            <div class='about-cat'>
+            <div class='about-cat' id='skills'>
                 <h3>Skills</h3>
-                <img class='tech-pic' id='nodejs'
-                    src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Flarge%2F2x%2Fnodejs-icon-logo-png-transparent.png&f=1&nofb=1'>
-                <label for='nodejs'>Node Javascript</label>
-                <img class='tech-pic' id='expressjs' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimages%2Fexpress-js-icon-20.png&f=1&nofb=1'>
-                <label for='expressjs'>Express JS</label>
-                <img class='tech-pic' id='axiosjs' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*rb4FGtrP4okA0A8MEBLLfA.png&f=1&nofb=1'>
-                <label for='axiosjs'>Axios JS</label>
-                <img class='tech-pic' id='python' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F159-1595848_python-logo-png-transparent-background-python-logo-png.png&f=1&nofb=1'>
-                <label for='python'>Python</label>
-                <img class='tech-pic' id='postgres' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcloud-elements.com%2Fwp-content%2Fuploads%2F2016%2F06%2Fpostgres-logo-01.png&f=1&nofb=1'>
-                <label for='postgres'>PostgreSQL</label>
-                <img class='tech-pic' id='html' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.logolynx.com%2Fimages%2Flogolynx%2F79%2F7994348fe469949fbc5ebc15b543d56d.jpeg&f=1&nofb=1'>
-                <label for='html'>HTML & CSS</label>
+                <div>
+                    <div class='skill-cat'>
+                        <img class='tech-pic' id='nodejs' src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Flarge%2F2x%2Fnodejs-icon-logo-png-transparent.png&f=1&nofb=1'>
+                        <label for='nodejs'>Node Javascript</label>
+                    <!-- </div>         -->
+                    <!-- <div class='skill-cat'> -->
+                        <img class='tech-pic' id='expressjs' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimages%2Fexpress-js-icon-20.png&f=1&nofb=1'>
+                        <label for='expressjs'>Express JS</label>
+                    <!-- </div> -->
+                    <!-- <div class='skill-cat'> -->
+                        <img class='tech-pic' id='axiosjs' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*rb4FGtrP4okA0A8MEBLLfA.png&f=1&nofb=1'>
+                        <label for='axiosjs'>Axios JS</label>
+                    <!-- </div> -->
+                    <!-- <div class='skill-cat'> -->
+                        <img class='tech-pic' id='python' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F159-1595848_python-logo-png-transparent-background-python-logo-png.png&f=1&nofb=1'>
+                        <label for='python'>Python</label>
+                    <!-- </div> -->
+                    <!-- <div class='skill-cat'> -->
+                        <img class='tech-pic' id='postgres' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcloud-elements.com%2Fwp-content%2Fuploads%2F2016%2F06%2Fpostgres-logo-01.png&f=1&nofb=1'>
+                        <label for='postgres'>PostgreSQL</label>
+                    <!-- </div> -->
+                    <!-- <div class='skill-cat'> -->
+                        <img class='tech-pic' id='html' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.logolynx.com%2Fimages%2Flogolynx%2F79%2F7994348fe469949fbc5ebc15b543d56d.jpeg&f=1&nofb=1'>
+                        <label for='html'>HTML & CSS</label>
+                    </div>
+
+                </div>
             </div>
         </section>
 
