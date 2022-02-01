@@ -126,7 +126,7 @@ label {
 
 /* ////////////////////////////////////////// */
 
-.project-section { 
+/* .project-section { 
     padding:15px;
     background-color: #6081A9;
     width:1500px;
@@ -134,10 +134,31 @@ label {
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
+} */
+
+.project-section {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width:1500px;
 }
 
 #project-pic {
     width:800px;
+}
+
+.project-category {
+    width:100%;
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #6081A9;
+    padding:15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
 }
 
 .project-desc {

@@ -20,9 +20,9 @@
 
         <h2 class='section-head'>About Me</h2><br>
         <div class='tab'>
-            <button class='tablink' onclick="changeContent(event, 'personal')">Personal</button>
-            <button class='tablink' onclick="changeContent(event, 'education')">Education & Experience</button>
-            <button class='tablink' onclick="changeContent(event, 'skills')">Skills</button>
+            <button class='about-tablink tablink' onclick="changeAboutContent(event, 'personal')">Personal</button>
+            <button class='about-tablink tablink' onclick="changeAboutContent(event, 'education')">Education & Experience</button>
+            <button class='about-tablink tablink' onclick="changeAboutContent(event, 'skills')">Skills</button>
         </div>
         <section class='about-me-section'>
             <div class='about-cat' id='personal'>
@@ -70,52 +70,83 @@
                 <h3>Skills</h3>
                 <div>
                     <div class='skill-cat'>
+                        <img class='tech-pic' id='python' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F159-1595848_python-logo-png-transparent-background-python-logo-png.png&f=1&nofb=1'>
+                        <label for='python'>Python</label>
+
+                        <img class='tech-pic' id='flask' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.clipartkey.com%2Fmpngs%2Fm%2F145-1450089_python-flask-icon.png&f=1&nofb=1'>
+                        <label for='axiosjs'>Flask</label>
+
                         <img class='tech-pic' id='nodejs' src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Flarge%2F2x%2Fnodejs-icon-logo-png-transparent.png&f=1&nofb=1'>
                         <label for='nodejs'>Node Javascript</label>
     
                         <img class='tech-pic' id='expressjs' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimages%2Fexpress-js-icon-20.png&f=1&nofb=1'>
                         <label for='expressjs'>Express JS</label>
                 
-                        <img class='tech-pic' id='axiosjs' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*rb4FGtrP4okA0A8MEBLLfA.png&f=1&nofb=1'>
-                        <label for='axiosjs'>Axios JS</label>
-                
-                        <img class='tech-pic' id='python' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F159-1595848_python-logo-png-transparent-background-python-logo-png.png&f=1&nofb=1'>
-                        <label for='python'>Python</label>
-         
                         <img class='tech-pic' id='postgres' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcloud-elements.com%2Fwp-content%2Fuploads%2F2016%2F06%2Fpostgres-logo-01.png&f=1&nofb=1'>
                         <label for='postgres'>PostgreSQL</label>
             
                         <img class='tech-pic' id='html' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.logolynx.com%2Fimages%2Flogolynx%2F79%2F7994348fe469949fbc5ebc15b543d56d.jpeg&f=1&nofb=1'>
                         <label for='html'>HTML & CSS</label>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <h2 class='section-head'>Projects</h2>
+        <h2 class='section-head'>Projects</h2><br>
+        <div class='tab'>
+            <button class='project-tablink tablink' onclick="changeProjectContent(event, 'DIYers')">DIYers.com</button>
+            <button class='project-tablink tablink' onclick="changeProjectContent(event, 'DndCreator')">D&D Character Creator</button>
+        </div>
         <section class='project-section'>
-            <h3>Basic Dungeons & Dragons Character Creator</h3>
-            <a href="https://github.com/Colby77/foundations-capstone-project" target="_blank">Github Link</a>
-            <div class='project-desc'>
-                <img id='project-pic' src='dndcreator1.png'>
-                <button id='swap-pic'>Screenshots >>></button>
+            <div class='project-category' id='DndCreator'>
+                <h3>Basic Dungeons & Dragons Character Creator</h3>
+                <a href="https://github.com/Colby77/foundations-capstone-project" target="_blank">Github Link</a>
+                <div class='project-desc'>
+                    <img id='project-pic' src='dndcreator1.png'>
+                    <button id='swap-pic'>Screenshots >>></button>
+                </div>
+                <p class='explain'>
+                    I built a simple D&D character creator using an API (https://www.dnd5eapi.co/).
+                    On the homepage, you can click the pictures to display options from whatever category you clicked.
+                    Clicking on an option then shows specific details and rules about the option.  The information 
+                    is the result from making the request to the API.
+                <br><br>
+                    The main function of the site is to make and save characters to a database.  Users follow the instructions
+                    to make a character and their options are saved to the character sheet form at the bottom of the page. When
+                    the character is submitted, it is saved to the database.
+                <br><br>
+                    Users can also register an account to the database.  Their passwords are hashed with node js bcrypt
+                    before they are stored.
+                <br><br>
+                    I used html, css, postgreSQL, and node.js with express, axios, cors, bcrypt and sequelize.
+                </p>
             </div>
-            <p class='explain'>
-                I built a simple D&D character creator using an API (https://www.dnd5eapi.co/).
-                On the homepage, you can click the pictures to display options from whatever category you clicked.
-                Clicking on an option then shows specific details and rules about the option.  The information 
-                is the result from making the request to the API.
-            <br><br>
-                The main function of the site is to make and save characters to a database.  Users follow the instructions
-                to make a character and their options are saved to the character sheet form at the bottom of the page. When
-                the character is submitted, it is saved to the database.
-            <br><br>
-                Users can also register an account to the database.  Their passwords are hashed with node js bcrypt
-                before they are stored.
-            <br><br>
-                I used html, css, postgreSQL, and node js with express, axios, cors, bcrypt and sequelize.
-            </p>       
+
+            <div class='project-category' id='DIYers'>
+                <h3>DIYers.com</h3>
+                <a href="https://github.com/Colby77/devmountain-spec-capstone-project" target="_blank">Github Link</a>
+                <a href='https://devmountain-spec-project-cw.herokuapp.com/' target='_blank'>Deployed on Heroku</a>
+                <div class='project-desc'>
+                    <iframe
+                    width="500"
+                    height="500"
+                    frameborder="0" style="border:0"
+                    src='https://devmountain-spec-project-cw.herokuapp.com/' allowfullscreen>
+                  </iframe>
+                </div>
+                <p class='explain'>
+                    A shopping site for do-it-yourself-ers. The site would sell tools for peoples' hobbies like welding or woodworking or automotive related stuff.
+                    The features include basic website functionality like registering an account and adding items to the 'cart'. 
+
+                <br><br>
+                    I also added a supply locator feature
+                    where users can enter a city and material they need and find stores where to buy the material near the city. Every time a product is viewed, 
+                    it is counted and represented in a graph as well.
+
+                <br><br>
+                    I used Python with Flask and SQLAlchemy, HTML/CSS, Bootstrap and PostgreSQL for this project
+                </p>
+            </div>
         </section>
 
         <h2 class='section-head'>Contact</h2>
@@ -132,6 +163,6 @@
         </section>
     </main>
     <footer></footer>
-    <script src='index.js'></script>
+    <script src='./index.js'></script>
 </body>
 </html>

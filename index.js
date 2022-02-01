@@ -1,7 +1,10 @@
 const projectPic = document.getElementById('project-pic')
 const swapPic = document.getElementById('swap-pic')
 const aboutCats = document.getElementsByClassName('about-cat')
-const tablinks = document.getElementsByClassName('tablink')
+const projectCategories = document.getElementsByClassName('project-category')
+
+const aboutTablinks = document.getElementsByClassName('about-tablink')
+const projectTablinks = document.getElementsByClassName('project-tablink')
 
 let currentImg = 0
 
@@ -13,17 +16,33 @@ pictureSources = [
     'dndcreator5.png'
 ]
 
-const changeContent = (evt, contentName) => {
+const changeAboutContent = (evt, contentName) => {
     console.log(aboutCats)
     for(let i = 0; i < aboutCats.length; i++){
         aboutCats[i].style.display = "none"
     }
-    for(let i = 0; i < tablinks.length; i++){
-        tablinks[i].className = tablinks[i].className.replace(' active', '')
+    for(let i = 0; i < aboutTablinks.length; i++){
+        aboutTablinks[i].className = aboutTablinks[i].className.replace('active', '')
     }
     document.getElementById(contentName).style.display = 'flex'
     evt.currentTarget.className += ' active';
+    return
 }
+
+
+const changeProjectContent = (event, projectId) => {
+    console.log(projectCategories)
+    for(let i = 0; i < projectCategories.length; i++){
+        projectCategories[i].style.display = 'none'
+    }
+    for(let i = 0; i < projectTablinks.length; i ++){
+        projectTablinks[i].className = projectTablinks[i].className.replace('active', '')
+    }
+    document.getElementById(projectId).style.display = 'flex'
+    event.currentTarget.className += ' active';
+    return
+}
+
 
 swapPic.addEventListener('click', () => {
     console.log(currentImg)
