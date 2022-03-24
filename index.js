@@ -1,19 +1,27 @@
-const projectPic = document.getElementById('project-pic')
-const swapPic = document.getElementById('swap-pic')
+const dndPic = document.getElementById('project-pic')
+const pythonBlockchainPic = document.getElementById('python-blockchain-pic')
+const swapPicDnd = document.getElementById('swap-pic-dnd')
 const aboutCats = document.getElementsByClassName('about-cat')
 const projectCategories = document.getElementsByClassName('project-category')
 
 const aboutTablinks = document.getElementsByClassName('about-tablink')
 const projectTablinks = document.getElementsByClassName('project-tablink')
 
-let currentImg = 0
+let dndImg = 0
+let pythonBlockchainImg = 0
 
-pictureSources = [
+dndPictureSources = [
     'dndcreator1.png',
     'dndcreator2.png',
     'dndcreator3.png',
     'dndcreator4.png',
     'dndcreator5.png'
+]
+
+pythonBlockchainPictureSources = [
+    'fastapi_docs.png',
+    'blockchain1.png',
+    'blockchain2.png'
 ]
 
 const changeAboutContent = (evt, contentName) => {
@@ -44,14 +52,38 @@ const changeProjectContent = (event, projectId) => {
 }
 
 
-swapPic.addEventListener('click', () => {
-    console.log(currentImg)
-    if(currentImg <= 4){
-        projectPic.src = pictureSources[currentImg]
-        currentImg++
-    }else{
-        currentImg = 0
-        projectPic.src = pictureSources[currentImg]
-        currentImg++
+// swapPicDnd.addEventListener('click', () => {
+//     console.log(dndImg)
+//     // console.log(value)
+//     if(dndImg <= 4){
+//         projectPic.src = pictureSources[dndImg]
+//         dndImg++
+//     }else{
+//         dndImg = 0
+//         projectPic.src = pictureSources[dndImg]
+//         dndImg++
+//     }
+// })
+
+const changePic = (type) => {
+    console.log(type)
+    if(type === 'dnd'){
+        if(dndImg <= 4){
+            dndPic.src = dndPictureSources[dndImg]
+            dndImg++
+        }else{
+            dndImg = 0
+            dndPic.src = dndPictureSources[dndImg]
+            dndImg++
+        }
+    }else if(type === 'pythonBlockchain'){
+        if(pythonBlockchainImg <= 2){
+            pythonBlockchainPic.src = pythonBlockchainPictureSources[pythonBlockchainImg]
+            pythonBlockchainImg++
+        }else{
+            pythonBlockchainImg = 0
+            pythonBlockchainPic.src = pythonBlockchainPictureSources[pythonBlockchainImg]
+            pythonBlockchainImg++
+        }
     }
-})
+}

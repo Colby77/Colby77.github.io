@@ -96,14 +96,15 @@
         <div class='tab'>
             <button class='project-tablink tablink' onclick="changeProjectContent(event, 'DIYers')">DIYers.com</button>
             <button class='project-tablink tablink' onclick="changeProjectContent(event, 'DndCreator')">D&D Character Creator</button>
+            <button class='project-tablink tablink' onclick="changeProjectContent(event, 'Python_Blockchain')">Python Blockchain</button>
         </div>
         <section class='project-section'>
             <div class='project-category' id='DndCreator'>
                 <h3>Basic Dungeons & Dragons Character Creator</h3>
                 <a href="https://github.com/Colby77/foundations-capstone-project" target="_blank">Github Link</a>
                 <div class='project-desc'>
-                    <img id='project-pic' src='dndcreator1.png'>
-                    <button id='swap-pic'>Screenshots >>></button>
+                    <img class='project-pic' id='dnd-pic' src='dndcreator1.png'>
+                    <button id='swap-pic' onclick="changePic('dnd')">Screenshots >>></button>
                 </div>
                 <p class='explain'>
                     I built a simple D&D character creator using an API (https://www.dnd5eapi.co/).
@@ -145,6 +146,23 @@
 
                 <br><br>
                     I used Python with Flask and SQLAlchemy, HTML/CSS, Bootstrap and PostgreSQL for this project
+                </p>
+            </div>
+            <div class='project-category' id='Python_Blockchain'>
+                <h3>Python Blockchain</h3>
+                <a href="https://github.com/Colby77/fastAPI-blockchain" target="_blank">Github Link</a>
+                <div class='project-desc'>
+                    <img class='project-pic' id='python-blockchain-pic' src='fastapi_docs.png'>
+                    <button id='swap-pic' onclick="changePic('pythonBlockchain')">Screenshots >>></button>
+                </div>
+                <p class='explain'>
+                    I am very interested in cryptocurrencies and blockchains but they have always seemed so complex and mysterious to me.
+                <br><br>
+                    I followed a tutorial online and used Python to build my own blockchain. I used FastAPI to interact with the blockchain as an API.
+                <br><br>
+                    Well, now I can start to wrap my head around how they work. Even if it is a very simple blockchain.
+                <br><br>
+                    I used Python and FastAPI for this project.
                 </p>
             </div>
         </section>
